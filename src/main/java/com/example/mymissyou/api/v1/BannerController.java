@@ -1,4 +1,4 @@
-package com.example.mymissyou.v1;
+package com.example.mymissyou.api.v1;
 
 import com.example.mymissyou.model.Banner;
 import com.example.mymissyou.service.BannerService;
