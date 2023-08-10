@@ -1,5 +1,6 @@
 package com.example.mymissyou.api.v1;
 
+import com.example.mymissyou.exception.http.NotFoundException;
 import com.example.mymissyou.model.Banner;
 import com.example.mymissyou.service.BannerService;
 import org.hibernate.validator.constraints.NotBlank;
@@ -18,6 +19,9 @@ public class BannerController {
     public Banner getByName(@PathVariable @NotBlank String name) {
 
         Banner banner = bannerService.getByName(name);
+        if (banner == null) {
+            throw new NotFoundException(30005);
+        }
         System.out.println(name);
         System.out.println(banner);
         return banner;
