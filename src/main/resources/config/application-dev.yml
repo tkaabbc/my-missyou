@@ -11,3 +11,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    serialization:
+      write-dates-as-timestamps: true
