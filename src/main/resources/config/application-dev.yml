@@ -15,3 +15,8 @@ spring:
     property-naming-strategy: SNAKE_CASE
     serialization:
       write-dates-as-timestamps: true
+
+missyou:
+  security:
+    jwt-key: cooper957
+    token-expired-in: 86400000
