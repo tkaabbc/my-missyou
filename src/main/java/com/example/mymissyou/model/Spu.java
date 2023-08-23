@@ -35,4 +35,8 @@ public class Spu extends BaseEntity {
     @OneToMany()
     @JoinColumn(name="spuId")
     private List<SpuDetailImg> spuDetailImgList;
+
+    @OneToMany()
+    @JoinColumn(name="spuId")
+    private List<Sku> skuList;
 }

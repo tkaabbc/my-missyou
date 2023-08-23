@@ -19,7 +19,7 @@ public class AuthenticationService {
     public String authenticate(String username, String password) {
         User user = userRepository.findByUsername(username);
         if (user != null && user.getPassword().equals(password)) {
-            return JwtToken.createToken(user.getUsername());
+            return JwtToken.createToken(user.getUsername(), user.getId());
         }
         // TODO optimize by send validating result to font-end
         return null;

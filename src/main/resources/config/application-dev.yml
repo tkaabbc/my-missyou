@@ -12,7 +12,6 @@ spring:
         show_sql: true
         format_sql: true
   jackson:
-    property-naming-strategy: SNAKE_CASE
     serialization:
       write-dates-as-timestamps: true
 
@@ -20,3 +19,6 @@ missyou:
   security:
     jwt-key: cooper957
     token-expired-in: 86400000
+  order:
+    max-sku-limit: 777
+    pay-time-limit: 3600
